@@ -278,8 +278,6 @@ namespace argh {
             for (const auto &p : parser_.params_)
                 if (p) usage << p->key();
             usage << " <" << remainderName_ << ">";
-            std::string s;
-            s.operator basic_string_view();
             return usage.str();
         }
 
