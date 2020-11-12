@@ -4,17 +4,18 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        "name": "C++ Launch",
-        "type": "cppdbg",
-        "request": "launch",
-        "program": "${workspaceFolder}/argh/build/src/argh",
-        "args": ["-i inputFile", "-dv"],
-        "environment": [{ "name": "squid", "value": "clam" }],
-        "cwd": "${workspaceFolder}",
-        "launch": "argh",
-        "linux": {
-            "MIMode": "gdb",
-            "miDebuggerPath": "/usr/bin/gdb"
+        {
+            "name": "C++ Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/src/argh",
+            "args": ["-dvi=inputFile", "--temp /var/tmp"],
+            "environment": [{ "name": "squid", "value": "clam" }],
+            "cwd": "${workspaceFolder}",
+            "linux": {
+                "MIMode": "gdb",
+                "miDebuggerPath": "/usr/bin/gdb"
+            }
         }
     ]
 }
