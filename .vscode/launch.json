@@ -10,6 +10,11 @@
         "program": "${workspaceFolder}/argh/build/src/argh",
         "args": ["-i inputFile", "-dv"],
         "environment": [{ "name": "squid", "value": "clam" }],
-        "cwd": "${workspaceFolder}"
+        "cwd": "${workspaceFolder}",
+        "launch": "argh",
+        "linux": {
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb"
+        }
     ]
 }
